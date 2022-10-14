@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "gokuboso";
+    src: url(../../resources/chogokubosogothic_5.ttf);
+}
+html {
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color: aliceblue;
+    font-size: 10px;
+    font-family: "Poiret One", "gokuboso";
+    color: lightsteelblue;
+    width:100%;
+    height:100%;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0 2.5%;
+    width: 95%;
+    height: 100%;
+    font-size: 0.8rem;
+}
+
+h1 {
+    margin: 0 auto;
+    padding: 0 auto;
+    font-size: 3rem;
+}
+
+.weight-thin {
+    font-weight: 100;
+}
+.weight-normal {
+    font-weight: 400;
+}
+.weight-bold {
+    font-weight: 700;
+}
+
+.shadow-on {
+    text-shadow: 1px 1px rgba(70, 131, 180, 0.14);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom:2rem;
+}
+
+content {
+    width: 100%;
+    height: 100%;
+}
+
+row {
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background-color: transparent;
+    color: lightsteelblue;
+    border-color: lightsteelblue;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+}
+
+button.hamburger {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+
+button:hover {
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+.slidemenu {
+    width: 25%;
+    height: 100%;
+    border: 1px solid lightsteelblue;
+    opacity: 0;
+}
+
+.fade-in-ltr {
+    opacity 1;
+    animation: fade-in-left-to-right 0.55s ease-in forwards;
+}
+
+.fade-in-rtl {
+    opacity 0;
+    animation: fade-in-right-to-left 0.55s ease-out forwards;
+}
+
+@keyframes fade-in-right-to-left {
+    from {
+       opacity: 0;
+       transform: translateX(400%);
+    }
+    to {
+       opacity: 1;
+       transform: translateX(300%);
+    }
+ }
+
+ @keyframes fade-in-left-to-right {
+    from {
+       opacity: 1;
+       transform: translateX(300%);
+    }
+    to {
+       opacity: 0;
+       transform: translateX(400%);
+    }
+ }

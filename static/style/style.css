@@ -45,7 +45,7 @@ header {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-bottom:2rem;
+    /* border-bottom: solid 1px lightsteelblue; */
 }
 
 content {
@@ -81,10 +81,19 @@ button:hover {
 }
 
 .slidemenu {
+    position: absolute;
+    top: 5.5rem;
     width: 25%;
     height: 100%;
     border: 1px solid lightsteelblue;
     opacity: 0;
+    backdrop-filter: blur(10px);
+}
+
+.slidemenu > .menucontent {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
 }
 
 .fade-in-ltr {
@@ -117,4 +126,10 @@ button:hover {
        opacity: 0;
        transform: translateX(400%);
     }
+ }
+
+
+
+ .test{
+    font-size: 70rem;
  }

@@ -1,6 +1,6 @@
-window.onload = () => {
+document.addEventListener('DOMContentLoaded', function() {
     initialize();
-};
+});
 
 function initialize(){
     const hamburgerButton = document.querySelector("button.hamburger");

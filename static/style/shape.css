@@ -1,24 +1,97 @@
-.triangle-tr {
-    border-top: 50px solid #F0897F;
-    border-right: 50px solid #f6da69;
-    border-bottom: 50px solid transparent;
-    border-left: 50px solid transparent;
+/* Triangle */
+.shape-triangle-top-right {
+    border-top-style: solid;
+    border-top-color:  var(--color-secondary);
+    border-right-style: solid;
+    border-right-color:  var(--color-secondary);
+    border-bottom-style: solid;
+    border-bottom-color:  transparent;
+    border-left-style: solid;
+    border-left-color:  transparent;
 }
-.triangle-tl {
-    border-top: 50px solid #F0897F;
-    border-left: 50px solid #F0897F;
-    border-bottom: 50px solid transparent;
-    border-right: 50px solid transparent;
+.shape-triangle-top-left {
+    border-top-style: solid;
+    border-top-color:  var(--color-secondary);
+    border-left-style: solid;
+    border-left-color:  var(--color-secondary);
+    border-bottom-style: solid;
+    border-bottom-color:  transparent;
+    border-right-style: solid;
+    border-right-color:  transparent;
 }
-.triangle-br {
-    border-bottom: 50px solid #F0897F;
-    border-right: 50px solid #F0897F;
-    border-bottom: 50px solid transparent;
-    border-left: 50px solid transparent;
+.shape-triangle-bottom-right {
+    border-bottom-style: solid;
+    border-bottom-color:  var(--color-secondary);
+    border-right-style: solid;
+    border-right-color:  var(--color-secondary);
+    border-top-style: solid;
+    border-top-color:  transparent;
+    border-left-style: solid;
+    border-left-color:  transparent;
 }
-.triangle-bl {
-    border-bottom: 50px solid #F0897F;
-    border-left: 50px solid #F0897F;
-    border-bottom: 50px solid transparent;
-    border-right: 50px solid transparent;
+.shape-triangle-bottom-left {
+    border-bottom-style: solid;
+    border-bottom-color:  var(--color-secondary);
+    border-left-style: solid;
+    border-left-color:  var(--color-secondary);
+    border-top-style: solid;
+    border-top-color:  transparent;
+    border-right-style: solid;
+    border-right-color:  transparent;
+}
+
+*[class*="top-right"].light{
+    border-top-color: var(--color-light);
+    border-right-color: var(--color-light);
+}
+*[class*="top-left"].light{
+    border-top-color: var(--color-light);
+    border-left-color: var(--color-light);
+}
+*[class*="bottom-right"].light {
+    border-bottom-color: var(--color-light);
+    border-right-color: var(--color-light);
+}
+*[class*="bottom-left"].light {
+    border-bottom-color: var(--color-light);
+    border-left-color: var(--color-light);
+}
+
+*[class*="top-right"].dark {
+    border-top-color: var(--color-dark);
+    border-right-color: var(--color-dark);
+}
+*[class*="top-left"].dark {
+    border-top-color: var(--color-dark);
+    border-left-color: var(--color-dark);
+}
+*[class*="bottom-right"].dark {
+    border-bottom-color: var(--color-dark);
+    border-right-color: var(--color-dark);
+}
+*[class*="bottom-left"].dark {
+    border-bottom-color: var(--color-dark);
+    border-left-color: var(--color-dark);
+}
+
+/* quadrangle */
+.shape-quadrangle {
+    border-top: solid var(--color-secondary);
+    border-right: solid var(--color-secondary);
+    border-bottom: solid var(--color-secondary);
+    border-left: solid var(--color-secondary);
+}
+
+.shape-quadrangle.light{
+    border-top: solid var(--color-light);
+    border-right: solid var(--color-light);
+    border-bottom: solid var(--color-light);
+    border-left: solid var(--color-light);
+}
+
+.shape-quadrangle.dark {
+    border-top: solid var(--color-dark);
+    border-right: solid var(--color-dark);
+    border-bottom: solid var(--color-dark);
+    border-left: solid var(--color-dark);
 }

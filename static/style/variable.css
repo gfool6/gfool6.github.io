@@ -1,0 +1,8 @@
+:root {
+    --color-primary: steelblue;
+    --color-secondary: lightsteelblue;
+    --color-light: aliceblue;
+    --color-dark: rgb(34, 74, 106);
+    --color-text-light: lightsteelblue;
+    --color-text-dark: rgb(34, 74, 106);
+}

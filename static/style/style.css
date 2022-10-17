@@ -1,36 +1,54 @@
+@import url("./variable.css");
 @import url("./shape.css");
 @import url("./animation.css");
 @font-face {
     font-family: "gokuboso";
     src: url(../../resources/chogokubosogothic_5.ttf);
 }
+
+* {
+    font-family: "Poiret One", "gokuboso";
+}
+
 html {
     margin: 0 auto;
     padding: 0 auto;
-    background-color: aliceblue;
-    font-size: 10px;
-    font-family: "Poiret One", "gokuboso";
-    color: lightsteelblue;
-    width:100%;
-    height:100%;
+    background-color: var(--color-light);
+    color: var(--color-text-light);
+    width:100vw;
+    height:100vh;
     overflow: hidden;
+    font-size: 10px;
 }
 
 body {
     margin: 0 auto;
     padding: 0 auto;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     font-size: 0.8rem;
 }
 
 .background{
     position: absolute;
     margin: 0 auto;
-    padding: 0 auto;
-    width:100%;
-    height:100%;
+    width:100vw;
+    height:100vh;
     z-index: -1;
+}
+
+.shapes {
+    width: 10%;
+    height: 10%;
+}
+
+.shapes > * {
+    position: absolute;
+    border-top-width: 100px;
+    border-bottom-width: 100px;
+    border-left-width: 50vw;
+    border-right-width: 50vw;
+    rotate: 180deg;
 }
 
 h1 {
@@ -50,21 +68,21 @@ h1 {
 }
 
 .shadow-on {
-    text-shadow: 1px 1px rgba(70, 131, 180, 0.14);
+    text-shadow: 1px 1px var(--color-text-light);
 }
 
 header {
-    width: 95%;
+    width: 95vw;
     display: flex;
     flex-direction: column;
-    padding: 0 2.5%;
+    padding: 0 2.5vw;
     background-color: transparent;
 }
 
 content {
-    width: 100%;
-    height: 100%;
-    padding: 0 2.5%;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 2.5vw;
     background-color: transparent;
 }
 
@@ -78,41 +96,60 @@ row {
 
 button {
     background-color: transparent;
-    color: lightsteelblue;
-    border-color: lightsteelblue;
+    color: var(--color-text-light);
+    border-color: var(--color-secondary);
     border-style: solid;
     border-width: 1px;
     cursor: pointer;
+    font-size: 1.7rem;
 }
 
 button.hamburger {
     border-radius: 50%;
     width: 32px;
     height: 32px;
+    font-size: 1.7rem;
+    font-weight: bolder;
 }
 
 button:hover {
-    background-color: rgba(128, 128, 128, 0.1);
+    background-color: rgba(176, 196, 222, 0.2);
 }
 
 .slidemenu {
     position: absolute;
     top: 5.5rem;
-    width: 25%;
-    height: 100%;
-    border: 1px solid lightsteelblue;
+    width: 25vw;
+    height: 92vh;
+    border: 1px solid var(--color-secondary);
     opacity: 0;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(20px); */
 }
 
 .slidemenu > .menucontent {
-    width: 100%;
     height: 100%;
+    margin: 0 auto;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
 }
 
+.menucontent > .buttons {
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
 
-
+.menucontent > .buttons > * {
+    width: 100%;
+    margin-top: 1rem;
+}
+.menucontent > .buttons > button {
+    padding: 0.8rem;
+    font-weight: bolder;
+}
 
 
  .test{

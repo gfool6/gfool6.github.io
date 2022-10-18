@@ -1,50 +1,50 @@
 /* Triangle */
 .shape-triangle-top-right {
     border-top-style: solid;
-    border-top-color:  var(--color-secondary);
+    border-top-color: var(--color-secondary);
     border-right-style: solid;
-    border-right-color:  var(--color-secondary);
+    border-right-color: var(--color-secondary);
     border-bottom-style: solid;
-    border-bottom-color:  transparent;
+    border-bottom-color: transparent;
     border-left-style: solid;
-    border-left-color:  transparent;
+    border-left-color: transparent;
 }
 .shape-triangle-top-left {
     border-top-style: solid;
-    border-top-color:  var(--color-secondary);
+    border-top-color: var(--color-secondary);
     border-left-style: solid;
-    border-left-color:  var(--color-secondary);
+    border-left-color: var(--color-secondary);
     border-bottom-style: solid;
-    border-bottom-color:  transparent;
+    border-bottom-color: transparent;
     border-right-style: solid;
-    border-right-color:  transparent;
+    border-right-color: transparent;
 }
 .shape-triangle-bottom-right {
     border-bottom-style: solid;
-    border-bottom-color:  var(--color-secondary);
+    border-bottom-color: var(--color-secondary);
     border-right-style: solid;
-    border-right-color:  var(--color-secondary);
+    border-right-color: var(--color-secondary);
     border-top-style: solid;
-    border-top-color:  transparent;
+    border-top-color: transparent;
     border-left-style: solid;
-    border-left-color:  transparent;
+    border-left-color: transparent;
 }
 .shape-triangle-bottom-left {
     border-bottom-style: solid;
-    border-bottom-color:  var(--color-secondary);
+    border-bottom-color: var(--color-secondary);
     border-left-style: solid;
-    border-left-color:  var(--color-secondary);
+    border-left-color: var(--color-secondary);
     border-top-style: solid;
-    border-top-color:  transparent;
+    border-top-color: transparent;
     border-right-style: solid;
-    border-right-color:  transparent;
+    border-right-color: transparent;
 }
 
-*[class*="top-right"].light{
+*[class*="top-right"].light {
     border-top-color: var(--color-light);
     border-right-color: var(--color-light);
 }
-*[class*="top-left"].light{
+*[class*="top-left"].light {
     border-top-color: var(--color-light);
     border-left-color: var(--color-light);
 }
@@ -79,7 +79,7 @@
     border: solid var(--color-secondary);
 }
 
-.shape-quadrangle.light{
+.shape-quadrangle.light {
     border: solid var(--color-light);
 }
 

@@ -9,7 +9,9 @@
 /* ----- Elements Setting ----- */
 * {
     font-family: "Poiret One", "gokuboso";
-    
+}
+*::-webkit-scrollbar {
+    display: none;
 }
 
 html {
@@ -17,8 +19,8 @@ html {
     padding: 0 auto;
     background-color: var(--color-dark);
     color: var(--color-text-light);
-    width:100vw;
-    height:100vh;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
     font-size: 10px;
     filter: hue-rotate(-20deg);
@@ -72,25 +74,20 @@ row {
     font-weight: 700;
 }
 
-.text-bordering{
-    text-shadow: 
-    var(--color-text-light) 1px 1px 0, 
-    var(--color-text-light) -1px -1px 0,
-    var(--color-text-light) -1px 1px 0, 
-    var(--color-text-light) 1px -1px 0,
-    var(--color-text-light) 0px 1px 0, 
-    var(--color-text-light)  0 -1px 0,
-    var(--color-text-light) -1px 0 0, 
-    var(--color-text-light) 1px 0 0;
+.text-bordering {
+    text-shadow: var(--color-text-light) 1px 1px 0,
+        var(--color-text-light) -1px -1px 0, var(--color-text-light) -1px 1px 0,
+        var(--color-text-light) 1px -1px 0, var(--color-text-light) 0px 1px 0,
+        var(--color-text-light) 0 -1px 0, var(--color-text-light) -1px 0 0,
+        var(--color-text-light) 1px 0 0;
 }
 
-.tc-light{
+.tc-light {
     color: var(--color-text-light);
 }
-.tc-dark{
+.tc-dark {
     color: var(--color-text-dark);
 }
-
 
 /* ----- Button Component ----- */
 button {
@@ -122,25 +119,25 @@ button.hamburger {
     position: absolute;
     top: 0;
     bottom: 0;
-    left:0;
+    left: 0;
     right: 0;
     width: 18px;
     height: 1px;
     margin: auto;
     background-color: var(--color-secondary);
 }
-.hamburger > span::before{
+.hamburger > span::before {
     transform: translateY(-4px);
     z-index: 2;
     content: "";
 }
-.hamburger > span::after{
+.hamburger > span::after {
     transform: translateY(4px);
     z-index: 2;
     content: "";
 }
 
-button:hover{
+button:hover {
     background-color: rgba(var(--color-primary-rgb), 0.5);
 }
 
@@ -150,13 +147,12 @@ button:hover{
     background-color: var(--color-light);
 }
 
-
 /* ----- Card ----- */
 .cards {
     margin: 10% auto;
     width: 90%;
 }
-.card{
+.card {
     width: 240px;
     height: 320px;
     overflow: hidden;
@@ -170,11 +166,11 @@ button:hover{
 }
 .card > .text {
     padding: 1rem;
-}  
+}
 .card > .text > .title {
     font-size: 3rem;
     font-weight: 900;
-    margin:0.5rem 0;
+    margin: 0.5rem 0;
 
     overflow: hidden;
     text-overflow: ellipsis;
@@ -183,7 +179,7 @@ button:hover{
 .card > .text > .detail {
     font-size: 1.5rem;
     font-weight: 900;
-    margin:0 0;
+    margin: 0 0;
     height: 5rem;
 
     overflow: hidden;
@@ -191,7 +187,6 @@ button:hover{
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
 }
-
 
 /* ----- SlideMenu ----- */
 .slidemenu {
@@ -233,13 +228,12 @@ button:hover{
     border-color: var(--color-light);
 }
 
-
 /* ----- Backgrounds ----- */
-.background{
+.background {
     position: absolute;
     margin: 0 auto;
-    width:100vw;
-    height:100vh;
+    width: 100vw;
+    height: 100vh;
     z-index: -1;
 }
 

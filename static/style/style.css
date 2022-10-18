@@ -6,6 +6,7 @@
     src: url(../../resources/chogokubosogothic_5.ttf);
 }
 
+/* ----- Elements Setting ----- */
 * {
     font-family: "Poiret One", "gokuboso";
 }
@@ -29,46 +30,10 @@ body {
     font-size: 0.8rem;
 }
 
-.background{
-    position: absolute;
-    margin: 0 auto;
-    width:100vw;
-    height:100vh;
-    z-index: -1;
-}
-
-.shapes {
-    width: 10%;
-    height: 10%;
-}
-
-.shapes > * {
-    position: absolute;
-    border-top-width: 100px;
-    border-bottom-width: 100px;
-    border-left-width: 50vw;
-    border-right-width: 50vw;
-    rotate: 180deg;
-}
-
 h1 {
     margin: 0 auto;
     padding: 0 auto;
     font-size: 3rem;
-}
-
-.weight-thin {
-    font-weight: 100;
-}
-.weight-normal {
-    font-weight: 400;
-}
-.weight-bold {
-    font-weight: 700;
-}
-
-.shadow-on {
-    text-shadow: 1px 1px var(--color-text-light);
 }
 
 header {
@@ -94,6 +59,38 @@ row {
     align-items: center;
 }
 
+/* ----- Text Decoration ----- */
+.weight-thin {
+    font-weight: 100;
+}
+.weight-normal {
+    font-weight: 400;
+}
+.weight-bold {
+    font-weight: 700;
+}
+
+.text-bordering{
+    text-shadow: 
+    var(--color-text-light) 1px 1px 0, 
+    var(--color-text-light) -1px -1px 0,
+    var(--color-text-light) -1px 1px 0, 
+    var(--color-text-light) 1px -1px 0,
+    var(--color-text-light) 0px 1px 0, 
+    var(--color-text-light)  0 -1px 0,
+    var(--color-text-light) -1px 0 0, 
+    var(--color-text-light) 1px 0 0;
+}
+
+.tc-light{
+    color: var(--color-text-light);
+}
+.tc-dark{
+    color: var(--color-text-dark);
+}
+
+
+/* ----- Button Component ----- */
 button {
     background-color: transparent;
     color: var(--color-text-light);
@@ -110,12 +107,43 @@ button.hamburger {
     height: 32px;
     font-size: 1.7rem;
     font-weight: bolder;
+
+    position: relative;
+    overflow: hidden;
+    display: block;
+    z-index: 0;
+}
+.hamburger > span,
+.hamburger > span::before,
+.hamburger > span::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    width: 18px;
+    height: 1px;
+    margin: auto;
+    background: var(--color-text-light);
+}
+.hamburger > span::before{
+    transform: translateY(-4px);
+    z-index: 2;
+    content: "";
+}
+.hamburger > span::after{
+    transform: translateY(4px);
+    z-index: 2;
+    content: "";
 }
 
 button:hover {
     background-color: rgba(176, 196, 222, 0.2);
 }
 
+
+/* ----- SlideMenu ----- */
 .slidemenu {
     position: absolute;
     top: 5.5rem;
@@ -152,6 +180,25 @@ button:hover {
 }
 
 
- .test{
-    font-size: 70rem;
- }
+/* ----- Backgrounds ----- */
+.background{
+    position: absolute;
+    margin: 0 auto;
+    width:100vw;
+    height:100vh;
+    z-index: -1;
+}
+
+.shapes {
+    width: 10%;
+    height: 10%;
+}
+
+.shapes > * {
+    position: absolute;
+    border-top-width: 100px;
+    border-bottom-width: 100px;
+    border-left-width: 50vw;
+    border-right-width: 50vw;
+    rotate: 180deg;
+}

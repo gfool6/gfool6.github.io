@@ -1,35 +1,77 @@
 .fade-in-ltr {
-    opacity: 1;
-    animation: fade-in-left-to-right 0.55s ease-in forwards;
+   opacity: 1;
+   animation: fade-in-left-to-right 0.55s ease-in forwards;
 }
 
 .fade-in-rtl {
-    opacity: 0;
-    animation: fade-in-right-to-left 0.55s ease-out forwards;
+   opacity: 0;
+   animation: fade-in-right-to-left 0.55s ease-out forwards;
 }
 
 @keyframes fade-in-right-to-left {
-    from {
-       opacity: 0;
-       display: none;
-       transform: translateX(400%);
-    }
-    to {
-       opacity: 1;
-       display: block;
-       transform: translateX(288%);
-    }
- }
+   from {
+      opacity: 0;
+      display: none;
+      transform: translateX(400%);
+   }
+   to {
+      opacity: 1;
+      display: block;
+      transform: translateX(288%);
+   }
+}
 
- @keyframes fade-in-left-to-right {
-    from {
-       opacity: 1;
-       display: block;
-       transform: translateX(288%);
-    }
-    to {
-       opacity: 0;
-       display: none;
-       transform: translateX(400%);
-    }
- }
+@keyframes fade-in-left-to-right {
+   from {
+      opacity: 1;
+      display: block;
+      transform: translateX(288%);
+   }
+   to {
+      opacity: 0;
+      display: none;
+      transform: translateX(400%);
+   }
+}
+
+
+button.hamburger.onclose > span{
+   animation: hamburger-lm 0.25s step-end forwards;
+}
+button.hamburger.onclose > span::before{
+   animation: hamburger-lt 0.25s forwards;
+}
+button.hamburger.onclose > span::after{
+   animation: hamburger-lb 0.25s forwards;
+}
+button.hamburger.onshow > span{
+   animation: hamburger-lm 0.25s step-end reverse;
+}
+button.hamburger.onshow > span::before{
+   animation: hamburger-lt 0.25s reverse;
+}
+button.hamburger.onshow > span::after{
+   animation: hamburger-lb 0.25s reverse;
+}
+
+@keyframes hamburger-lt {
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: rotate(45deg);
+   }
+}
+@keyframes hamburger-lm {
+   50%, 100% {
+      height: 0px;
+   }
+}
+@keyframes hamburger-lb {
+   50% {
+      transform: translateY(0);
+   }
+   100% {
+      transform: rotate(-45deg);
+   }
+}

@@ -21,7 +21,7 @@ html {
     height:100vh;
     overflow: hidden;
     font-size: 10px;
-    filter: hue-rotate(0deg);
+    filter: hue-rotate(-20deg);
 }
 
 body {
@@ -95,7 +95,7 @@ row {
 /* ----- Button Component ----- */
 button {
     background-color: transparent;
-    color: var(--color-text-light);
+    color: var(--color-secondary);
     border-color: var(--color-secondary);
     border-style: solid;
     border-width: 1px;
@@ -127,7 +127,7 @@ button.hamburger {
     width: 18px;
     height: 1px;
     margin: auto;
-    background: var(--color-text-light);
+    background-color: var(--color-secondary);
 }
 .hamburger > span::before{
     transform: translateY(-4px);
@@ -140,8 +140,14 @@ button.hamburger {
     content: "";
 }
 
-button:hover {
-    background-color: rgba(176, 196, 222, 0.2);
+button:hover{
+    background-color: rgba(var(--color-primary-rgb), 0.5);
+}
+
+.hamburger:hover span,
+.hamburger:hover span::before,
+.hamburger:hover span::after {
+    background-color: var(--color-light);
 }
 
 
@@ -155,9 +161,11 @@ button:hover {
     top: 5.5rem;
     width: 25vw;
     height: 92vh;
-    border: 1px solid var(--color-secondary);
+    color: var(--color-light);
+    border: 1px solid var(--color-light);
     opacity: 0;
     backdrop-filter: blur(10px);
+    background-color: rgba(var(--color-darker-rgb), 0.4);
 }
 
 .slidemenu > .menucontent {
@@ -183,6 +191,8 @@ button:hover {
 .menucontent > .buttons > button {
     padding: 0.8rem;
     font-weight: bolder;
+    color: var(--color-light);
+    border-color: var(--color-light);
 }
 
 

@@ -1,11 +1,22 @@
 :root {
-    --color-primary: steelblue;
-    --color-secondary: lightsteelblue;
-    --color-light: aliceblue;
-    --color-dark: rgb(34, 74, 106);
-    --color-darker: rgb(23, 50, 73);
-    --color-text-light: lightsteelblue;
-    --color-text-dark: rgb(34, 74, 106);
-    --color-accent: rgb(39, 173, 148);
-    --color-accent-light: rgb(255, 208, 40);
+    /* hex */
+    --color-primary: #4682b4;
+    --color-secondary: #b0c4de;
+    --color-light: #f0f8ff;
+    --color-dark: #224a6a;
+    --color-darker: #173249;
+    --color-text-light: #b0c4de;
+    --color-text-dark: #224a6a;
+    --color-accent: #27ad94;
+    --color-accent-light: #ffd028;
+    /* rgb */
+    --color-primary-rgb: 70, 130, 180;
+    --color-secondary-rgb: 176, 196, 222;
+    --color-light-rgb: 240, 248, 255;
+    --color-dark-rgb: 34, 74, 106;
+    --color-darker-rgb: 23, 50, 73;
+    --color-text-light-rgb: 176, 196, 222;
+    --color-text-dark-rgb: 34, 74, 106;
+    --color-accent-rgb: 39, 173, 148;
+    --color-accent-light-rgb: 255, 208, 40;
 }

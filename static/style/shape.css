@@ -76,22 +76,13 @@
 
 /* quadrangle */
 .shape-quadrangle {
-    border-top: solid var(--color-secondary);
-    border-right: solid var(--color-secondary);
-    border-bottom: solid var(--color-secondary);
-    border-left: solid var(--color-secondary);
+    border: solid var(--color-secondary);
 }
 
 .shape-quadrangle.light{
-    border-top: solid var(--color-light);
-    border-right: solid var(--color-light);
-    border-bottom: solid var(--color-light);
-    border-left: solid var(--color-light);
+    border: solid var(--color-light);
 }
 
 .shape-quadrangle.dark {
-    border-top: solid var(--color-dark);
-    border-right: solid var(--color-dark);
-    border-bottom: solid var(--color-dark);
-    border-left: solid var(--color-dark);
+    border: solid var(--color-dark);
 }

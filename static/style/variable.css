@@ -3,6 +3,9 @@
     --color-secondary: lightsteelblue;
     --color-light: aliceblue;
     --color-dark: rgb(34, 74, 106);
+    --color-darker: rgb(23, 50, 73);
     --color-text-light: lightsteelblue;
     --color-text-dark: rgb(34, 74, 106);
+    --color-accent: rgb(39, 173, 148);
+    --color-accent-light: rgb(255, 208, 40);
 }

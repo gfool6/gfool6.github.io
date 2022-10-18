@@ -9,17 +9,19 @@
 /* ----- Elements Setting ----- */
 * {
     font-family: "Poiret One", "gokuboso";
+    
 }
 
 html {
     margin: 0 auto;
     padding: 0 auto;
-    background-color: var(--color-light);
+    background-color: var(--color-dark);
     color: var(--color-text-light);
     width:100vw;
     height:100vh;
     overflow: hidden;
     font-size: 10px;
+    filter: hue-rotate(0deg);
 }
 
 body {
@@ -155,7 +157,7 @@ button:hover {
     height: 92vh;
     border: 1px solid var(--color-secondary);
     opacity: 0;
-    /* backdrop-filter: blur(20px); */
+    backdrop-filter: blur(10px);
 }
 
 .slidemenu > .menucontent {
@@ -193,16 +195,40 @@ button:hover {
     z-index: -1;
 }
 
-.shapes {
+.background > .shapes {
     width: 10%;
     height: 10%;
 }
 
-.shapes > * {
+.background > .shapes > * {
     position: absolute;
     border-top-width: 100px;
     border-bottom-width: 100px;
     border-left-width: 50vw;
     border-right-width: 50vw;
     rotate: 180deg;
+}
+
+.background > .accent.r {
+    rotate: -20deg;
+}
+.background > .accent.l {
+    rotate: 30deg;
+}
+.background > *[class*="accent"] > * {
+    position: absolute;
+    top: 60vh;
+    right: -40vw;
+    border-top-width: 1200px;
+    border-bottom-width: 1200px;
+    border-left-width: 200vw;
+    border-right-width: 200vw;
+    border-color: var(--color-darker);
+}
+.background > .accent.r > * {
+    top: 80vh;
+    border-color: var(--color-primary);
+}
+.background > .accent.l > * {
+    border-color: var(--color-darker);
 }

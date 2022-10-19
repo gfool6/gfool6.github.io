@@ -1,9 +1,9 @@
-.fade-in-ltr {
+.state-hidden {
    opacity: 1;
    animation: fade-in-right-to-left 0.55s ease-in-out reverse;
 }
 
-.fade-in-rtl {
+.state-show {
    opacity: 0;
    animation: fade-in-right-to-left 0.55s ease-in-out forwards;
 }
@@ -12,12 +12,12 @@
    from {
       opacity: 0;
       display: none;
-      transform: translateX(400%);
+      transform: translateX(500%);
    }
    to {
       opacity: 1;
       display: block;
-      transform: translateX(280%);
+      transform: translateX(390%);
    }
 }
 

@@ -10,9 +10,9 @@ function initialize(){
         ev.preventDefault();
         if(hamburgerButton.classList.contains("onshow")){
             
-            menu.classList.remove("fade-in-ltr");
+            menu.classList.remove("state-hidden");
             requestAnimationFrame(function () {
-                menu.classList.add("fade-in-rtl");
+                menu.classList.add("state-show");
             });
 
             hamburgerButton.classList.remove("onshow");
@@ -21,9 +21,9 @@ function initialize(){
             });
         }
         else{
-            menu.classList.remove("fade-in-rtl");
+            menu.classList.remove("state-show");
             requestAnimationFrame(function () {
-                menu.classList.add("fade-in-ltr");
+                menu.classList.add("state-hidden");
             });
 
             hamburgerButton.classList.remove("onclose");

@@ -5,8 +5,9 @@
     --color-light: #f0f8ff;
     --color-dark: #224a6a;
     --color-darker: #173249;
-    --color-text-light: #b0c4de;
+    --color-text-light: #f0f8ff;
     --color-text-dark: #224a6a;
+    --color-text-darker: #173249;
     --color-accent: #27ad94;
     --color-accent-light: #ffd028;
     /* rgb */
@@ -15,8 +16,9 @@
     --color-light-rgb: 240, 248, 255;
     --color-dark-rgb: 34, 74, 106;
     --color-darker-rgb: 23, 50, 73;
-    --color-text-light-rgb: 176, 196, 222;
+    --color-text-light-rgb: 240, 248, 255;
     --color-text-dark-rgb: 34, 74, 106;
+    --color-text-darker-rgb: 23, 50, 73;
     --color-accent-rgb: 39, 173, 148;
     --color-accent-light-rgb: 255, 208, 40;
 }

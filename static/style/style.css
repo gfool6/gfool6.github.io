@@ -3,7 +3,7 @@
 @import url("./animation.css");
 @font-face {
     font-family: "gokuboso";
-    src: url(../../resources/chogokubosogothic_5.ttf);
+    src: url(../../static/resources/fonts/chogokubosogothic_5.ttf);
 }
 
 /* ----- Elements Setting ----- */

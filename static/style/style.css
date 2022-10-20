@@ -1,6 +1,7 @@
 @import url("./variable.css");
 @import url("./shape.css");
 @import url("./animation.css");
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;400;700;900&family=M+PLUS+Rounded+1c:wght@100;400;700&family=Poiret+One&display=swap');
 @font-face {
     font-family: "gokuboso";
     src: url(../../static/resources/fonts/chogokubosogothic_5.ttf);
@@ -8,8 +9,13 @@
 
 /* ----- Elements Setting ----- */
 * {
-    font-family: "Poiret One", "gokuboso";
+    font-family: "Poiret One", 
+    'gokuboso',
+    'M PLUS 1p',
+    'M PLUS Rounded 1c', 
+    sans-serif;
     box-sizing: border-box;
+    font-weight: 100;
 }
 *::-webkit-scrollbar {
     display: none;
@@ -23,6 +29,7 @@ html {
     width: 100vw;
     height: 100vh;
     font-size: 10px;
+    
     filter: hue-rotate(-20deg);
 }
 
@@ -112,6 +119,9 @@ header > row > h1{
 }
 .tc-darker {
     color: var(--color-text-darker);
+}
+.tc-primary{
+    color: var(--color-primary);
 }
 
 .ts-large {
@@ -247,7 +257,7 @@ button:hover {
 }
 .card > .text > .title {
     font-size: 3rem;
-    font-weight: bold;
+    line-height: 3.2rem;
     margin: 0.5rem 0;
 
     overflow: hidden;
@@ -256,7 +266,7 @@ button:hover {
 }
 .card > .text > .detail {
     font-size: 1.5rem;
-    font-weight: normal;
+    line-height: 1.6rem;
     margin: 0 0;
 
     overflow: hidden;
@@ -333,7 +343,6 @@ button:hover {
 }
 .menucontent > .buttons > button {
     padding: 0.8rem;
-    font-weight: bolder;
     color: var(--color-light);
     border-color: var(--color-light);
 }

@@ -309,7 +309,7 @@ button:hover {
 
 /* ----- SlideMenu ----- */
 .slidemenu {
-    position: absolute;
+    position: fixed;
     right: 100%;
     top: 8rem;
     width: 25vw;

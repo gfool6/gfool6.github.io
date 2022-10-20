@@ -1,6 +1,7 @@
 @import url("./variable.css");
 @import url("./shape.css");
 @import url("./animation.css");
+@import url("./blog.css");
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;400;700;900&family=M+PLUS+Rounded+1c:wght@100;400;700&family=Poiret+One&display=swap');
 /* @font-face {
     font-family: "gokuboso";
@@ -65,7 +66,7 @@ content {
     width: 95vw;
     padding: 0 2.5vw;
     margin: 0 auto;
-    margin-top: 20vh;
+    margin-top: 22vh;
     background-color: transparent;
 
     display: flex;

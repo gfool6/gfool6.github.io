@@ -16,7 +16,6 @@ window.onload = async () => {
 }
 
 function loadingRecentArticle(){
-    console.log("aaaa")
     fetchAsJson("/articles/information.json")
         .then(j => {
             setArticle(`/articles/${j.recent}`);
@@ -45,6 +44,9 @@ function setArticle(loadingArticlePath){
     .then(t => {
         var parsedMarkdown = markdown.parse(t);
         articleArea.innerHTML = parsedMarkdown;
+        articleArea.querySelectorAll("a").forEach(elem => {
+            elem.setAttribute("target", "_blank")
+        });
     });   
 }
 

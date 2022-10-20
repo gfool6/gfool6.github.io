@@ -15,7 +15,23 @@ window.onload = async () => {
     await markdown.ready;
 }
 
-function fetchText(path){
+function loadingRecentArticle(){
+    console.log("aaaa")
+    fetchAsJson("/articles/information.json")
+        .then(j => {
+            setArticle(`/articles/${j.recent}`);
+        });
+}
+
+function fetchAsJson(path){
+    return fetch(path, {
+        referrerPolicy: "origin",
+        mode: "cors",
+    })
+    .then(response => response.json());
+}
+
+function fetchAsText(path){
     return fetch(path, {
         referrerPolicy: "origin",
         mode: "cors",
@@ -25,7 +41,7 @@ function fetchText(path){
 
 function setArticle(loadingArticlePath){
     const articleArea = document.querySelector(".article-area");
-    fetchText(loadingArticlePath)
+    fetchAsText(loadingArticlePath)
     .then(t => {
         var parsedMarkdown = markdown.parse(t);
         articleArea.innerHTML = parsedMarkdown;
@@ -34,7 +50,7 @@ function setArticle(loadingArticlePath){
 
 function initContent(loadingFile){
     const contentArea = document.getElementById("content-area");
-    fetchText(loadingFile)
+    fetchAsText(loadingFile)
     .then(t => {
         contentArea.innerHTML = t;
     });
@@ -59,6 +75,7 @@ function initTransition(){
     });
     document.querySelector("#transition-blog").addEventListener('click', ev => {
         initContent(blogViewPath);
+        loadingRecentArticle();
         menuCloseIfShown();
     });
     document.querySelector("header>row>h1").addEventListener('click', ev => {

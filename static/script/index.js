@@ -5,20 +5,36 @@ const softwareViewPath = "/pages/software.html";
 const socialViewPath = "/pages/social.html";
 const blogViewPath = "/pages/blog.html";
 
-
 document.addEventListener('DOMContentLoaded', function() {
     initHamburger();
     initTransition();
     initContent(indexViewPath);
 });
 
-function initContent(loadingFile){
-    const contentArea = document.querySelector("#content-area");
-    fetch(loadingFile, {
+window.onload = async () => {
+    await markdown.ready;
+}
+
+function fetchText(path){
+    return fetch(path, {
         referrerPolicy: "origin",
         mode: "cors",
     })
-    .then(response => response.text())
+    .then(response => response.text());
+}
+
+function setArticle(loadingArticlePath){
+    const articleArea = document.querySelector(".article-area");
+    fetchText(loadingArticlePath)
+    .then(t => {
+        var parsedMarkdown = markdown.parse(t);
+        articleArea.innerHTML = parsedMarkdown;
+    });   
+}
+
+function initContent(loadingFile){
+    const contentArea = document.getElementById("content-area");
+    fetchText(loadingFile)
     .then(t => {
         contentArea.innerHTML = t;
     });
@@ -27,22 +43,38 @@ function initContent(loadingFile){
 function initTransition(){
     document.querySelector("#transition-picture").addEventListener('click', ev => {
         initContent(pictureViewPath);
+        menuCloseIfShown();
     });
     document.querySelector("#transition-3d").addEventListener('click', ev => {
         initContent(modelViewPath);
+        menuCloseIfShown();
     });
     document.querySelector("#transition-software").addEventListener('click', ev => {
         initContent(softwareViewPath);
+        menuCloseIfShown();
     });
     document.querySelector("#transition-social").addEventListener('click', ev => {
         initContent(socialViewPath);
+        menuCloseIfShown();
     });
     document.querySelector("#transition-blog").addEventListener('click', ev => {
         initContent(blogViewPath);
+        menuCloseIfShown();
     });
     document.querySelector("header>row>h1").addEventListener('click', ev => {
         initContent(indexViewPath);
-    });;
+        menuCloseIfShown();
+        if(location.hash != undefined && location.hash){
+            location.href = location.href.replace(location.hash, "");
+        }
+    });
+}
+
+function menuCloseIfShown(){
+    const hamburgerButton = document.querySelector("button.hamburger");
+    if(hamburgerButton.classList.contains("onclose")){
+        hamburgerButton.click();
+    }
 }
 
 function initHamburger(){

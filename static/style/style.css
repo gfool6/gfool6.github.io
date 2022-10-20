@@ -3,16 +3,16 @@
 @import url("./animation.css");
 @import url("./blog.css");
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;400;700;900&family=M+PLUS+Rounded+1c:wght@100;400;700&family=Poiret+One&display=swap');
-/* @font-face {
+@font-face {
     font-family: "gokuboso";
     src: url(../../static/resources/fonts/chogokubosogothic_5.ttf);
-} */
+}
 
 /* ----- Elements Setting ----- */
 * {
     font-family: "Poiret One", 
-    /* 'gokuboso', */
     'M PLUS Rounded 1c', 
+    'gokuboso',
     'M PLUS 1p',
     sans-serif;
     box-sizing: border-box;
@@ -88,6 +88,7 @@ row {
 
 header > row > h1{
     cursor: pointer;
+    font-family: "Poiret One", "gokuboso";
 }
 #content-area{
     margin: 0 auto;

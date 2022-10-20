@@ -30,6 +30,10 @@ a{
     color: var(--color-accent-light);
     text-decoration: none;
     border-bottom: 0.5px solid var(--color-accent-light);
+    font-size: 1.5rem;
+}
+.archive > ul > li >  a {
+    font-size: 1.2rem;
 }
 
 .side-bar {

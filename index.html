@@ -10,13 +10,14 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
         <link
-            rel="stylesheet"
+            rel="preload stylesheet"
             href="./static/style/style.css"
             type="text/css"
         />
-        <script src="https://cdn.jsdelivr.net/npm/markdown-wasm@1.2.0/dist/markdown.min.js"></script>
-        <script src="./static/script/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/markdown-wasm@1.2.0/dist/markdown.min.js" async></script>
+        <script src="./static/script/index.js" async></script>
 
         <!-- ogp:必須タグ -->
         <meta property="og:url" content="https://gfool6.github.io/" />

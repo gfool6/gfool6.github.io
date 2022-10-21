@@ -12,6 +12,8 @@
 
 .article-area {
     margin: 0 6%;
+    flex-basis: 280%;
+    max-width: 140%;
 }
 .article-area > * {
     font-size: 1.5rem;
@@ -37,7 +39,8 @@ a{
 }
 
 .side-bar {
-    width: 60%;
+    flex-basis: 60%;
+    max-width: 30%;
 }
 .side-bar > * {
     border: 1px solid var(--color-secondary);

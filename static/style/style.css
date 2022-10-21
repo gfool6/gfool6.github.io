@@ -92,6 +92,7 @@ header > row > h1{
 }
 #content-area{
     margin: 0 auto;
+    width: 100%;
 }
 
 /* ----- Text Decoration ----- */

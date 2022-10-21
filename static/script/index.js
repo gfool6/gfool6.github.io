@@ -15,10 +15,28 @@ window.onload = async () => {
     await markdown.ready;
 }
 
-function loadingRecentArticle(){
-    fetchAsJson("/articles/information.json")
+function initCardContent(){
+    fetchAsJson("/static/resources/json/indexcard.json")
         .then(j => {
-            setArticle(`/articles/${j.recent}`);
+            j.cards.forEach((jElem, ind)=> {
+                var card = document.querySelectorAll(".card")[ind];
+                card.querySelector(".title").innerHTML = jElem.title;
+                card.querySelector(".detail").innerHTML = jElem.detail;
+                card.querySelector("img").setAttribute("src", jElem.image);
+                jElem.tags.forEach(tag => {
+                    card.querySelector(".optional>.tags").innerHTML += `<li class="tag-${tag}">${tag}</li>`;
+                });
+                card.onclick = () => {
+                    initContent(blogViewPath, jElem.link);
+                };
+            });
+        });
+}
+
+function loadingRecentArticle(){
+    fetchAsJson("/static/resources/json/information.json")
+        .then(j => {
+            setArticle(j.recent);
         });
 }
 
@@ -40,7 +58,7 @@ function fetchAsText(path){
 
 function setArticle(loadingArticlePath){
     const articleArea = document.querySelector(".article-area");
-    fetchAsText(loadingArticlePath)
+    fetchAsText(`/articles/${loadingArticlePath.slice(0,6)}/${loadingArticlePath}.md`)
     .then(t => {
         var parsedMarkdown = markdown.parse(t);
         articleArea.innerHTML = parsedMarkdown;
@@ -50,11 +68,19 @@ function setArticle(loadingArticlePath){
     });   
 }
 
-function initContent(loadingFile){
+function initContent(loadingFile, query){
     const contentArea = document.getElementById("content-area");
     fetchAsText(loadingFile)
     .then(t => {
         contentArea.innerHTML = t;
+        if(loadingFile.includes("blog") && (query ?? false)){
+            setArticle(query.split("=")[1])
+        }
+        if(loadingFile.includes("index")){
+            initCardContent();
+        }
+
+        window.scroll({top: 0});
     });
 }   
 

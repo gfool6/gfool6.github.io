@@ -5,14 +5,27 @@ const softwareViewPath = "/pages/software.html";
 const socialViewPath = "/pages/social.html";
 const blogViewPath = "/pages/blog.html";
 
+var viewStack = [];
+
 document.addEventListener('DOMContentLoaded', function() {
     initHamburger();
     initTransition();
     initContent(indexViewPath);
 });
 
+window.addEventListener('popstate', (e) => {
+    pop();
+});
+
 window.onload = async () => {
     await markdown.ready;
+}
+
+function pop(){
+    if(viewStack.length === 1) return;
+    viewStack.pop();
+    var stackParam = viewStack[viewStack.length-1];
+    initContent(stackParam["view"], stackParam["query"]);
 }
 
 function initCardContent(){
@@ -81,6 +94,10 @@ function initContent(loadingFile, query){
         }
 
         window.scroll({top: 0});
+        
+        viewStack.push({"view":loadingFile, "query":query});
+        if(viewStack.length > 0)
+            history.pushState(null, null, window.location);
     });
 }   
 

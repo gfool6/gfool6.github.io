@@ -2,7 +2,7 @@
 @import url("./shape.css");
 @import url("./animation.css");
 @import url("./blog.css");
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;400;700;900&family=M+PLUS+Rounded+1c:wght@100;400;700&family=Poiret+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;400;700;900&family=M+PLUS+Rounded+1c:wght@100;400;700&family=Poiret+One&display=swap");
 @font-face {
     font-family: "gokuboso";
     src: url(../../static/resources/fonts/chogokubosogothic_5.ttf);
@@ -10,11 +10,8 @@
 
 /* ----- Elements Setting ----- */
 * {
-    font-family: "Poiret One", 
-    'M PLUS Rounded 1c', 
-    'gokuboso',
-    'M PLUS 1p',
-    sans-serif;
+    font-family: "Poiret One", "M PLUS Rounded 1c", "gokuboso", "M PLUS 1p",
+        sans-serif;
     box-sizing: border-box;
     font-weight: 100;
 }
@@ -30,7 +27,7 @@ html {
     width: 100vw;
     height: 100vh;
     font-size: 10px;
-    
+
     filter: hue-rotate(-20deg);
 }
 
@@ -86,11 +83,11 @@ row {
     align-items: center;
 }
 
-header > row > h1{
+header > row > h1 {
     cursor: pointer;
     font-family: "Poiret One", "gokuboso";
 }
-#content-area{
+#content-area {
     margin: 0 auto;
     width: 100%;
 }
@@ -123,7 +120,7 @@ header > row > h1{
 .tc-darker {
     color: var(--color-text-darker);
 }
-.tc-primary{
+.tc-primary {
     color: var(--color-primary);
 }
 
@@ -213,7 +210,7 @@ button:hover {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
 }
-.top-text > p, 
+.top-text > p,
 .cards-description > p {
     text-align: center;
     padding: 0;
@@ -282,7 +279,7 @@ button:hover {
     padding: 1rem calc(1rem - 4px);
     background-color: rgba(var(--color-light-rgb), 0.2);
 }
-.optional > .tags{
+.optional > .tags {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -291,7 +288,7 @@ button:hover {
     align-items: center;
     justify-content: flex-start;
 }
-.tags > li[class*="tag"]{
+.tags > li[class*="tag"] {
     min-width: 60px;
     max-width: 100%;
     padding: 2px 0.5rem;
@@ -300,13 +297,13 @@ button:hover {
     border-radius: 4px;
     text-align: center;
 }
-.tag-news{
+.tag-news {
     background-color: var(--color-accent);
 }
-.tag-blog{
+.tag-blog {
     background-color: var(--color-primary);
 }
-.tag-shop{
+.tag-shop {
     background-color: var(--color-dark);
 }
 
@@ -358,7 +355,7 @@ button:hover {
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    background-blend-mode:overlay;
+    background-blend-mode: overlay;
     overflow: hidden;
 }
 

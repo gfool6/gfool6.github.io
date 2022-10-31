@@ -4,6 +4,34 @@
     flex-direction: column;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+img {
+    max-width: 75%;
+    width: auto;
+    height: auto;
+}
+
+pre:has(code),
+p:has(code) {
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 1rem;
+    background-color: rgba(var(--color-dark-rgb), 0.7);
+    backdrop-filter: blur(10px);
+}
+
+table {
+    border: 1px, solid;
+}
+
 .blog-content {
     width: 100%;
     display: flex;

@@ -9,37 +9,37 @@
         },
         {
             "title":"2個め",
-            "detail":"たぶん1行",
+            "detail":"markdown blog サンプル",
             "image":"/static/resources/images/2.png",
-            "tags":["blog", "news", "shop"],
+            "tags":["blog"],
             "link":"article=20221005_0"
         },
         {
             "title":"3個目",
             "detail":"簡単な詳細情報などなどなどなどなどなどなどなどなどなどなどなどなどなど",
             "image":"/static/resources/images/3.png",
-            "tags":["blog", "news", "shop"],
+            "tags":["shop"],
             "link":"article=20220928_0"
         },
         {
             "title":"4komeタイトル",
             "detail":"簡単な詳細情報",
             "image":"/static/resources/images/4.png",
-            "tags":["blog", "news", "shop"],
+            "tags":["news", "shop"],
             "link":"article=20220909_0"
         },
         {
             "title":"わぁ　5だ",
             "detail":"簡単な詳細情報などなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなど",
             "image":"/static/resources/images/5.png",
-            "tags":["blog", "news", "shop"],
+            "tags":["news"],
             "link":"article=20220802_0"
         },
         {
             "title":"666",
             "detail":"簡などなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなど",
             "image":"/static/resources/images/6.png",
-            "tags":["blog", "news", "shop"],
+            "tags":["blog", "shop"],
             "link":"article=20220718_0"
         }
     ]

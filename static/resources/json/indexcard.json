@@ -10,37 +10,44 @@
         {
             "title":"2個め",
             "detail":"markdown blog サンプル",
-            "image":"/static/resources/images/2.png",
+            "image":"/static/resources/images/7.jpg",
             "tags":["blog"],
             "link":"article=20221005_0"
         },
         {
             "title":"3個目",
             "detail":"簡単な詳細情報などなどなどなどなどなどなどなどなどなどなどなどなどなど",
-            "image":"/static/resources/images/3.png",
+            "image":"/static/resources/images/2.png",
             "tags":["shop"],
             "link":"article=20220928_0"
         },
         {
             "title":"4komeタイトル",
             "detail":"簡単な詳細情報",
-            "image":"/static/resources/images/4.png",
+            "image":"/static/resources/images/3.png",
             "tags":["news", "shop"],
             "link":"article=20220909_0"
         },
         {
             "title":"わぁ　5だ",
             "detail":"簡単な詳細情報などなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなど",
-            "image":"/static/resources/images/5.png",
+            "image":"/static/resources/images/8.jpg",
             "tags":["news"],
             "link":"article=20220802_0"
         },
         {
             "title":"666",
             "detail":"簡などなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなどなど",
-            "image":"/static/resources/images/6.png",
+            "image":"/static/resources/images/4.png",
             "tags":["blog", "shop"],
             "link":"article=20220718_0"
+        },
+        {
+            "title":"ナナナナ〜ナナナナ〜",
+            "detail":"ナイロン製品",
+            "image":"/static/resources/images/9.jpg",
+            "tags":["blog"],
+            "link":"article=20220701_0"
         }
     ]
 }
